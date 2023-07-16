@@ -1,0 +1,34 @@
+-> the webBrowser won't stop waiting for the response until res.end() is called
+
+-> req and res are readStream and writeStream objects
+--------------------------------------------------------------------------------------------------------
+
+=> Loadong Modules in NPM
+. When a request for some module is made how Node Resolves the path??
+1-> start with core module
+2-> search for developer modules if marked with ./ or ../
+3-> if the file is not found in the mentioned folder then search for a file named Index.js
+4-> Searches in node_modules/
+
+=> What all happens when we require a module 
+1-> Resolving and Loading
+
+2-> Wrapping  Immediately Invoked Function Expression=> (function (exports,require,module,__filename,__dirname){
+                                                            ....Code
+                                                        })
+*require->function to require modules
+*exports->an expression for module.exports
+*module->reference to current module 
+
+3-> Execution by Node
+
+4-> returning Exports 
+
+5-> Caching  (Modules are cached after the first time they are loaded and also the results of some calculations by these modules also get cached)
+
+console.log(arguments)
+
+-----------------------------------------------------------------------------------------------------------
+Exporting In Custom Modules:
+
+
