@@ -1,0 +1,21 @@
+#Base image
+FROM node:alpine
+#smallest possible image of node
+
+#Dependencies
+
+#Create a directory in the container and set it as the working directory so we dont have to specify the path in copying
+#./ means workdir for the container
+WORKDIR /usr/node-farm
+
+#package.json is not available now, so it will not work
+#this will copy everthing from local machine to the container
+#All the codes below will run if any change occurs in package.json
+COPY ./package.json ./
+RUN npm install 
+
+#All the codes below will run if any any change occurs in any of the files
+COPY ./ ./
+
+#Default command
+CMD ["npm", "start"]

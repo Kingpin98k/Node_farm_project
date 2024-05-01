@@ -1,7 +1,7 @@
-const app = require('./app')
+const app = require('./app');
 
-const port = 9999
+const port = 9999;
 
-app.listen(port,()=>{
-    console.log("Server Started Successfully")
-})
+app.listen(port, () => {
+  console.log('Server Started Successfully on port 9999... Hello Hi');
+});
